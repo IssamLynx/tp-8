@@ -53,5 +53,5 @@ task archiveDoc(type:Zip){
 task archiveTestsResults(type:Zip){
     baseName="archiveTestsResults"
     destinationDir = file("archive")
-    from 'test-results/test/'
+    from 'build/test-results/test/'
 }
