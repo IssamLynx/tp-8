@@ -51,7 +51,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        slackSend(baseUrl: 'https://hooks.slack.com/services/', token: 'T01T1LSFUV7/B01SP33499Q/IVdIEMaZJiguOqF8ELgV7t2p', attachments: '.', blocks: '.', channel: 'tp-7', message: 'a new version is deployed', sendAsText: true)
+        slackSend(baseUrl: 'https://hooks.slack.com/services/', token: 'T01T1LSFUV7/B01SP33499Q/IVdIEMaZJiguOqF8ELgV7t2p', attachments: '.', blocks: '.', channel: 'tp-7', message: 'Une nouvelle version a été deployée', sendAsText: true)
       }
     }
 
