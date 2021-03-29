@@ -12,7 +12,7 @@ pipeline {
 
     stage('mail') {
       steps {
-        mail(subject: 'New build', body: 'A new build is on the way', from: 'hi_benakcha@esi.dz', to: 'hi_benakcha@esi.dz')
+        mail(subject: 'New build', body: 'Mail message from issam bakha', from: 'hm_bakha@esi.dz', to: 'hm_bakha@esi.dz')
       }
     }
 
@@ -39,7 +39,7 @@ pipeline {
 
     stage('deployement') {
       when {
-        branch "master"
+        branch 'master'
       }
       steps {
         bat 'gradle publish'
@@ -47,8 +47,8 @@ pipeline {
     }
 
     stage('Slack notification') {
-       when {
-        branch "master"
+      when {
+        branch 'master'
       }
       steps {
         slackSend(baseUrl: 'https://hooks.slack.com/services/', token: 'T01T1LSFUV7/B01SP33499Q/IVdIEMaZJiguOqF8ELgV7t2p', attachments: '.', blocks: '.', channel: 'tp-7', message: 'a new version is deployed', sendAsText: true)
