@@ -12,7 +12,7 @@ pipeline {
 
     stage('mail') {
       steps {
-        mail(subject: 'New build', body: 'Mail message from issam bakha', from: 'hm_bakha@esi.dz', to: 'hm_bakha@esi.dz')
+        mail(subject: 'New build', body: 'Mail message from issam bakha', from: 'hm_bakha@esi.dz', to: 'hm_bakha@esi.dz', cc: 'hm_bakha@esi.dz')
       }
     }
 
